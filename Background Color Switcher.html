@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Color Switcher</title>
+
+    <style>
+      .on {
+        padding: 5px;
+        margin: 5px 5px;
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        width: 40%;
+        height: auto;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      h3 {
+        text-align: justify;
+      }
+
+      .btn {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border: solid grey;
+        cursor: pointer;
+      }
+
+      #white {
+        background-color: white;
+      }
+      #black {
+        background-color: black;
+      }
+      #red {
+        background-color: red;
+      }
+      #pink {
+        background-color: pink;
+      }
+
+      #colorchanger {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="colorchanger">
+      <span class="btn" id="white" onclick="change('#ffffff')"></span>
+      <span class="btn" id="black" onclick="change('#000000')"></span>
+      <span class="btn" id="red" onclick="change('#ff0000')"></span>
+      <span class="btn" id="pink" onclick="change('#ffc0cb')"></span>
+    </div>
+
+    <h1 class="on">About Us</h1>
+    <img
+      src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvczkzLXBhLTUzNDFfMi5wbmc.png"
+      alt=""
+    />
+    <h3 class="on">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sequi
+      mollitia eos iure placeat ab quia ipsum libero animi reiciendis facere
+      nemo cumque minima commodi natus temporibus voluptates culpa omnis
+      delectus inventore, nihil aliquam minus.
+    </h3>
+
+    <script>
+
+      function change(color){
+      document.body.style.backgroundColor = color;
+      let one = document.getElementsByClassName ("on");
+      if(color == "#000000"){
+      for(let elm of one){
+      elm.style.color = "white";
+      } 
+    }else {
+      for(let elm of one){
+      elm.style.color = "black";
+}
+ }} </script>
+  </body>
+</html>
